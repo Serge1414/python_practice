@@ -28,3 +28,9 @@ class Phone:
     def display_info(self):
         print(f"Номер телефону: {self.number}")
         print(f"Рівень заряду: {self.battery_level}%")
+
+phone = Phone("+223322223322", 57)
+phone.display_info()
+phone.use_battery(36)
+phone.display_info()
+phone.use_battery(14)
