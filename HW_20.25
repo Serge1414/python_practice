@@ -28,3 +28,12 @@ class Cart:
             print(f'Кошик клієнта {self.client}: {", ".join(self.items)}')
         else:
             print(f'Кошик клієнта {self.client} порожній.')
+
+cart = Cart("Mark")
+cart.add_item("Melon")
+cart.add_item("Wine")
+cart.add_item("Cherry")
+cart.show_cart()
+cart.remove_item("Cherry")
+cart.show_cart()
+
