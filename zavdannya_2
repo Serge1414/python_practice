@@ -1,0 +1,36 @@
+'''
+Завдання 2
+Створіть клас Phone з атрибутами number та battery_level.
+Додайте метод який зменшує заряд телефона(на скільки
+зменшити відсотків передається як параметр), якщо він
+опуститься нижче 20%, вивести повідомлення
+Додайте метод для виведення інформації про телефон.
+'''
+
+class Phone:
+    def __init__(self, number: str, battery_level: int):
+        self.number = number
+        self.battery_level = battery_level
+
+    def use_battery(self, percent: int):
+        if percent < 0:
+            print("Некоректне значення розряду.")
+            return
+
+        self.battery_level -= percent
+
+        if self.battery_level < 20:
+            print("Попередження: рівень заряду нижче 20%!")
+
+        if self.battery_level < 0:
+            self.battery_level = 0
+
+    def display_info(self):
+        print(f"Номер телефону: {self.number}")
+        print(f"Рівень заряду: {self.battery_level}%")
+
+phone = Phone("+223322223322", 57)
+phone.display_info()
+phone.use_battery(36)
+phone.display_info()
+phone.use_battery(14)

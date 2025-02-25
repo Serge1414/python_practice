@@ -1,0 +1,39 @@
+'''
+Завдання 1
+Створіть клас Cart(кошик клієнта магазину) з атрибутами
+client(ім’я клієнта) та items(список товарів).
+Додайте метод який додає новий товар до кошика
+Додайте метод який видаляє товар з кошика
+Додайте метод для виведення інформації про кошик
+'''
+
+class Cart:
+    def __init__(self, client):
+        self.client = client
+        self.items = []
+
+    def add_item(self, item):
+    self.items.append(item)
+    print(f'Товар "{item}" додано до кошика.')
+
+    def remove_item(self, item):
+        if item in self.items:
+            self.items.remove(item)
+            print(f'Товар "{item}" видалено з кошика.')
+        else:
+            print(f'Товар "{item}" відсутній у кошику.')
+
+    def show_cart(self):
+        if self.items:
+            print(f'Кошик клієнта {self.client}: {", ".join(self.items)}')
+        else:
+            print(f'Кошик клієнта {self.client} порожній.')
+
+cart = Cart("Mark")
+cart.add_item("Melon")
+cart.add_item("Wine")
+cart.add_item("Cherry")
+cart.show_cart()
+cart.remove_item("Cherry")
+cart.show_cart()
+
