@@ -24,3 +24,7 @@ class Phone:
 
         if self.battery_level < 0:
             self.battery_level = 0
+
+    def display_info(self):
+        print(f"Номер телефону: {self.number}")
+        print(f"Рівень заряду: {self.battery_level}%")
