@@ -11,3 +11,7 @@ class Cart:
     def __init__(self, client):
         self.client = client
         self.items = []
+
+    def add_item(self, item):
+    self.items.append(item)
+    print(f'Товар "{item}" додано до кошика.')
