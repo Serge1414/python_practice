@@ -15,3 +15,10 @@ class Cart:
     def add_item(self, item):
     self.items.append(item)
     print(f'Товар "{item}" додано до кошика.')
+
+    def remove_item(self, item):
+        if item in self.items:
+            self.items.remove(item)
+            print(f'Товар "{item}" видалено з кошика.')
+        else:
+            print(f'Товар "{item}" відсутній у кошику.')
