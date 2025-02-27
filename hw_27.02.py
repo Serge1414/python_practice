@@ -35,5 +35,8 @@ class BankAccount:
         if currency not in self.exchange_rates:
             raise ValueError(f"Валюта {currency} не підтримується.")
 
+    def get_info(self):
+        return f"Клієнт: {self.client_name}, Баланс: {self.balance} {self.currency}"
+
 
 
