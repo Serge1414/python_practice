@@ -44,5 +44,10 @@ class BankAccount:
         amount_in_usd = amount / self.exchange_rates[from_currency]
         return amount_in_usd * self.exchange_rates[to_currency]
 
+    def change_currency(self, new_currency):
+        new_currency = new_currency.upper()
+        self._validate_currency(new_currency)
+        self.balance = self.convert_currency(self.balance, self.currency, new_currency)
+        self.currency = new_currency
 
 
