@@ -38,5 +38,11 @@ class BankAccount:
     def get_info(self):
         return f"Клієнт: {self.client_name}, Баланс: {self.balance} {self.currency}"
 
+    def convert_currency(self, amount, from_currency, to_currency):
+        self._validate_currency(from_currency)
+        self._validate_currency(to_currency)
+        amount_in_usd = amount / self.exchange_rates[from_currency]
+        return amount_in_usd * self.exchange_rates[to_currency]
+
 
 
