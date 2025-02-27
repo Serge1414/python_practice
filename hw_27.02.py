@@ -25,5 +25,10 @@ class BankAccount:
         "GBP": 0.78
     }
 
+    def __init__(self, client_name, balance, currency):
+        self.client_name = client_name
+        self.balance = balance
+        self.currency = currency.upper()
+        self._validate_currency(self.currency)
 
 
