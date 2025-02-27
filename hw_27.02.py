@@ -50,4 +50,8 @@ class BankAccount:
         self.balance = self.convert_currency(self.balance, self.currency, new_currency)
         self.currency = new_currency
 
+    def deposit(self, amount):
+        if amount <= 0:
+            raise ValueError("Сума поповнення повинна бути більше 0.")
+        self.balance += amount
 
