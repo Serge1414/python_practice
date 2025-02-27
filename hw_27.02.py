@@ -31,4 +31,9 @@ class BankAccount:
         self.currency = currency.upper()
         self._validate_currency(self.currency)
 
+    def _validate_currency(self, currency):
+        if currency not in self.exchange_rates:
+            raise ValueError(f"Валюта {currency} не підтримується.")
+
+
 
