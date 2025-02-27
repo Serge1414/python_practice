@@ -55,3 +55,11 @@ class BankAccount:
             raise ValueError("Сума поповнення повинна бути більше 0.")
         self.balance += amount
 
+    def withdraw(self, amount):
+        if amount <= 0:
+            raise ValueError("Сума зняття повинна бути більше 0.")
+        if amount > self.balance:
+            raise ValueError("Недостатньо коштів на рахунку.")
+        self.balance -= amount
+
+
