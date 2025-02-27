@@ -17,4 +17,13 @@ ValueError)
 '''
 
 
+class BankAccount:
+    exchange_rates = {
+        "USD": 1.0,
+        "EUR": 0.92,
+        "UAH": 38.5,
+        "GBP": 0.78
+    }
+
+
 
