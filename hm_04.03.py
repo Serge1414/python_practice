@@ -35,3 +35,11 @@ def create_payment():
     else:
         print("Невідомий тип платежу!")
         return None
+
+
+payments = []
+for _ in range(3):
+    payment = create_payment()
+    if payment:
+        payments.append(payment)
+
