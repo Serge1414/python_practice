@@ -20,3 +20,18 @@ class CryptoPayment:
 
     def pay(self, amount):
         print(f"Оплата криптогаманцем {amount}{self.currency}")
+
+
+def create_payment():
+    payment_type = input("Введіть тип платежу (credit, paypal, crypto): ").strip().lower()
+    currency = input("Введіть валюту: ")
+
+    if payment_type == "credit":
+        return CreditCardPayment(currency)
+    elif payment_type == "paypal":
+        return PayPalPayment(currency)
+    elif payment_type == "crypto":
+        return CryptoPayment(currency)
+    else:
+        print("Невідомий тип платежу!")
+        return None
