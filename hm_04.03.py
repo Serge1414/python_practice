@@ -43,3 +43,8 @@ for _ in range(3):
     if payment:
         payments.append(payment)
 
+
+for payment in payments:
+    amount = float(input(f"Введіть суму для {type(payment).__name__}: "))
+    payment.pay(amount)
+
