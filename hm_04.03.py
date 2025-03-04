@@ -12,3 +12,11 @@ class PayPalPayment:
 
     def pay(self, amount):
         print(f"Оплата PayPal {amount}{self.currency}")
+
+
+class CryptoPayment:
+    def __init__(self, currency):
+        self.currency = currency
+
+    def pay(self, amount):
+        print(f"Оплата криптогаманцем {amount}{self.currency}")
