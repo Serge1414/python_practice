@@ -69,3 +69,7 @@ print("Рецепти, що містять томат:")
 for recipe in recipes:
     if "томат" in recipe:
         print(recipe)
+
+min_recipe = min(recipes, key=lambda r: r.time)
+print("\nРецепт з найменшим часом приготування:")
+min_recipe.display_info()
