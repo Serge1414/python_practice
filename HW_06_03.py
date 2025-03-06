@@ -34,3 +34,9 @@ Recipe("Піца",
  45)
 '''
 
+class Recipe:
+    def __init__(self, name, ingredients, text, time):
+        self.name = name
+        self.ingredients = ingredients
+        self.text = text
+        self.time = time
